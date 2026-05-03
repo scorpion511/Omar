@@ -21,24 +21,38 @@ overflow: hidden;
 h1 {
     font-size: 35px;
     text-align: center;
-    color: #00FFFF; /* Cyan color to match the scorpion */
-    font-family: sans-serif;
+    /* This makes the text black as requested */
+    color: black; 
+    font-family: 'Arial Black', sans-serif;
     
-    /* This creates the Neon Cyan Glow */
-    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    /* Fire effect using multiple layers of shadow */
+    text-shadow: 
+        0px -2px 4px #fff,   /* White inner heat */
+        0px -4px 10px #ff0,  /* Yellow flame */
+        0px -10px 20px #ff8000, /* Orange body */
+        0px -18px 40px #f00; /* Red outer glow */
     
-    /* This runs both the shaking and the fading together */
-    animation: shake 0.5s infinite, fade 2s ease-in-out infinite;
+    /* Apply the fire animation + your previous shaking/fading if desired */
+    animation: flicker 0.1s infinite alternate, shake 0.5s infinite;
     display: block;
 }
 
-/* The Fading Animation */
-@keyframes fade {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+/* This creates the 'Running' fire movement */
+@keyframes flicker {
+    0% {
+        text-shadow: 
+            0px -2px 4px #fff, 0px -4px 10px #ff0, 
+            0px -10px 20px #ff8000, 0px -18px 40px #f00;
+    }
+    100% {
+        text-shadow: 
+            0px -1px 3px #fff, 0px -2px 8px #ff0, 
+            0px -8px 18px #ff8000, 0px -15px 35px #f00;
+        transform: translateY(-1px); /* Slight upward 'heat' lift */
+    }
 }
 
-/* The Shaking Animation (already in your code, but keep this one) */
+/* Keep your existing shake animation below this */
 @keyframes shake {
   0% { transform: translateX(0); }
   20% { transform: translateX(-3px); }
@@ -47,8 +61,6 @@ h1 {
   80% { transform: translateX(3px); }
   100% { transform: translateX(0); }
 }
-
-
 .TextCaption{
 display: block;
     font-size: 20px;
