@@ -3,14 +3,27 @@
 <title>SCORPION Host Auto Exploit</title>
 <style>
 html, body {
-background-image: url("../scorp2.png");
-background-size: 100%;
-background-repeat: no-repeat;
-background-color: #24272b;
-color: white;
-text-align: center;
-margin: 0px;
-overflow: hidden;
+    /* Go back one folder to find the image */
+    background-image: url("../scorp2.png");
+    
+    /* This is the key: 'cover' fills the entire screen */
+    background-size: cover;
+    
+    /* This keeps the image centered */
+    background-position: center center;
+    
+    /* This ensures the background doesn't move when scrolling */
+    background-attachment: fixed;
+    
+    background-repeat: no-repeat;
+    background-color: #24272b;
+    height: 100vh; /* Force the body to be at least as tall as the screen */
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 h1 {
     font-size: 35px;
