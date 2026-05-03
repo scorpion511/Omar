@@ -4,47 +4,59 @@
      crossorigin="anonymous"></script>
 <style>
 html, body {
-background-image: url('scorp1.png');
-background-size: 100%;
-background-repeat: no-repeat;
-background-color: #24272b;
-color: white;
-text-align: center;
-margin: 0px;
-overflow: hidden;
+    background-image: url('scorp1.png');
+    background-size: cover; /* Changed to cover to fill the screen better */
+    background-repeat: no-repeat;
+    background-color: #24272b;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
 }
+
 .credit-fire {
     font-family: 'Arial Black', sans-serif;
-    font-size: 30px; /* Increased from 18px to 30px to make it bigger */
+    font-size: 60px; /* Made much bigger as requested */
+    font-weight: bold;
     color: black;
     display: block;
     clear: both;
     text-align: center;
-    margin: 40px auto; /* Added more space above the names */
+    margin: 60px auto; /* More space for the larger text */
     width: 100%;
     
-    /* Fire effect */
+    /* Stronger fire effect for bigger text */
     text-shadow: 
-        0px -1px 2px #fff,  
-        0px -2px 5px #ff0,  
-        0px -5px 10px #ff8000, 
-        0px -8px 20px #f00;   
+        0px -2px 4px #fff,  
+        0px -4px 10px #ff0,  
+        0px -10px 20px #ff8000, 
+        0px -18px 40px #f00;   
 
-    /* SLOWER ANIMATION: Changed from 0.15s to 3s for a smooth, slow fade */
-    animation: fire-flicker 0.15s infinite alternate, slow-fade 3s ease-in-out infinite;
+    /* Animation: fire flicker and the smooth slow fade */
+    animation: fire-flicker 0.1s infinite alternate, slow-fade 4s ease-in-out infinite;
 }
 
-/* New Slow Fading Animation */
-@keyframes slow-fade {
-    0%, 100% { opacity: 1; }   /* Fully visible */
-    50% { opacity: 0.2; }      /* Fades down to 20% visibility */
-}
-    100% {
-        text-shadow: 
-            0px -1px 1px #fff, 0px -1px 4px #ff0, 
-            0px -4px 8px #ff8000, 0px -6px 15px #f00;
-        transform: translateY(-1px);
+/* Fire flickering movement */
+@keyframes fire-flicker {
+    0% { transform: translateY(0px); }
+    100% { 
+        transform: translateY(-2px);
+        text-shadow: 0px -1px 3px #fff, 0px -2px 8px #ff0, 0px -8px 18px #ff8000, 0px -15px 35px #f00;
     }
+}
+
+/* Smooth Fading Animation */
+@keyframes slow-fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; } 
+}
+
+/* General H1 styling to match */
+h1 {
+    font-size: 50px;
+    color: yellow;
+    text-shadow: 2px 2px 4px black;
+}
 </style>
 </head>
 <br><br><br>
