@@ -13,6 +13,38 @@ text-align: center;
 margin: 0px;
 overflow: hidden;
 }
+ .credit-fire {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px; /* Slightly larger so the fire is visible */
+    text-align: center;
+    color: black; /* Black text as requested */
+    margin-top: 20px;
+    letter-spacing: 1px;
+    
+    /* Layered Fire Shadows for smaller text */
+    text-shadow: 
+        0px -1px 2px #fff,   /* Inner heat */
+        0px -2px 5px #ff0,   /* Yellow core */
+        0px -5px 10px #ff8000, /* Orange flame */
+        0px -8px 20px #f00;   /* Red outer glow */
+    
+    /* Flicker animation for the fire effect */
+    animation: fire-flicker 0.15s infinite alternate;
+}
+
+@keyframes fire-flicker {
+    0% {
+        text-shadow: 
+            0px -1px 2px #fff, 0px -2px 5px #ff0, 
+            0px -5px 10px #ff8000, 0px -8px 20px #f00;
+    }
+    100% {
+        text-shadow: 
+            0px -1px 1px #fff, 0px -1px 4px #ff0, 
+            0px -4px 8px #ff8000, 0px -6px 15px #f00;
+        transform: translateY(-1px);
+    }
+}
 </style>
 </head>
 <br><br><br>
@@ -30,6 +62,6 @@ overflow: hidden;
   <p>I</p>
   <p>O</p>
   <p>N</p>
-  <p class="credit-text">Hacked by Ahmed ESSAM</p>
+  <p class="credit-fire">Hacked by Ahmed ESSAM</p>
 </div>
 <script>
