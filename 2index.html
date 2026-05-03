@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SCORP HACK ALL VERSIONS - PS4</title>
+    <title>SCORP HACK ALL VERSIONS - Dareen & Omar PS4</title>
     <style>
         html, body {
             min-height: 100%;
@@ -43,7 +43,7 @@
         #date { float: left; margin-left: 1.25%; font-weight: bold; font-size: 28px; color: white; }
         #msgs { color: yellow; font-size: 25px; font-weight: bold; margin-top: 20px; height: 40px; }
     </style>
-    <script>
+        <script>
         function showdate() {
             var dt = new Date();
             var Hour = dt.getHours();
@@ -51,10 +51,16 @@
             var Day = dt.getDate();
             var Month = dt.getMonth() + 1;
             var Year = dt.getFullYear();
+
             if (Minute < 10) { Minute = "0" + Minute; }
-            if (Hour < 10) { Hour = "0" + Hour; }
+
+            // 12-hour format logic
+            var prepand = (Hour >= 12) ? " PM" : " AM";
+            Hour = Hour % 12;
+            Hour = Hour ? Hour : 12; 
+
             document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
-            document.getElementById("clock").innerHTML = (Hour + ":" + Minute);
+            document.getElementById("clock").innerHTML = (Hour + ":" + Minute + prepand);
         }
         setInterval(showdate, 1000);
 
