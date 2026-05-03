@@ -12,38 +12,64 @@ text-align: center;
 margin: 0px;
 overflow: hidden;
 }
-
 h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
+    font-size: 35px;
+    text-align: center;
+    /* This makes the text black as you requested */
+    color: black; 
+    font-family: 'Arial Black', sans-serif;
+    
+    /* Fire effect layers */
+    text-shadow: 
+        0px -2px 4px #fff,   /* White inner heat */
+        0px -4px 10px #ff0,  /* Yellow flame */
+        0px -10px 20px #ff8000, /* Orange body */
+        0px -18px 40px #f00; /* Red outer glow */
+    
+    /* Apply the fire movement animation */
+    animation: flicker 0.1s infinite alternate;
+    display: block;
+    margin-top: 20px;
+}
+/* This creates the 'Moving' fire glow */
+@keyframes flicker {
+    0% {
+        text-shadow: 
+            0px -2px 4px #fff, 0px -4px 10px #ff0, 
+            0px -10px 20px #ff8000, 0px -18px 40px #f00;
+    }
+    100% {
+        text-shadow: 
+            0px -1px 3px #fff, 0px -2px 8px #ff0, 
+            0px -8px 18px #ff8000, 0px -15px 35px #f00;
+        transform: translateY(-1px); /* Slight heat lift */
+    }
 }
 
-.TextCaption{
-display: block;
+.TextCaption {
+    display: block;
     font-size: 20px;
     color: #fff;
     text-decoration: none;
 }
 
-a img {
-    display: inline-block;  text-decoration: none;
-}
-a {
-    display: inline-block;  text-decoration: none;
+a img, a {
+    display: inline-block;
+    text-decoration: none;
 }
 
+/* Your original shake animation for hover */
 a:hover {
-  animation: shake 0.5s infinite;
+    animation: shake 0.5s infinite;
 }
+
 @keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-5px); }
-  40% { transform: translateX(5px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
 }
 </style>
 <script>
