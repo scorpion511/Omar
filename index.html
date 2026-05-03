@@ -85,5 +85,30 @@ h1 {
     <!-- YOUR NAME IN THE MIDDLE BELOW -->
     <p class="credit-fire">Hacked by Ahmed ESSAM</p>
 </div>
+     <script>
+  function showdate() {
+    var dt = new Date();
+    var Hour = dt.getHours();
+    var Minute = dt.getMinutes();
+    var Day = dt.getDate();
+    var Month = dt.getMonth() + 1;
+    var Year = dt.getFullYear();
 
-<script>
+    // 12-hour format with AM/PM
+    var prepand = (Hour >= 12) ? " PM" : " AM";
+    Hour = Hour % 12;
+    Hour = Hour ? Hour : 12;
+
+    if (Minute < 10) { Minute = "0" + Minute; }
+
+    document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
+    document.getElementById("clock").innerHTML = (Hour + ":" + Minute + prepand);
+  }
+
+  // Run the clock
+  showdate();
+  setInterval(showdate, 1000);
+</script>
+</body>
+</html>
+
