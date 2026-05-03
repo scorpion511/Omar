@@ -15,23 +15,24 @@ overflow: hidden;
 }
  .credit-fire {
     font-family: 'Arial Black', sans-serif;
-    font-size: 18px; /* Slightly larger so the fire is visible */
-    text-align: center;
-    color: black; /* Black text as requested */
-    margin-top: 20px;
-    letter-spacing: 1px;
+    font-size: 18px;
+    color: black;
     
-    /* Layered Fire Shadows for smaller text */
+    /* THESE ARE THE FIXES FOR ALIGNMENT */
+    display: block;       /* Takes up the whole line */
+    clear: both;          /* Ignores the floating clock/date */
+    text-align: center;   /* Centers the text */
+    margin: 20px auto;    /* Adds space above and centers the box */
+    width: 100%;          /* Ensures it uses the full width of the screen */
+    
+    /* Your fire effect */
     text-shadow: 
-        0px -1px 2px #fff,   /* Inner heat */
-        0px -2px 5px #ff0,   /* Yellow core */
-        0px -5px 10px #ff8000, /* Orange flame */
-        0px -8px 20px #f00;   /* Red outer glow */
-    
-    /* Flicker animation for the fire effect */
+        0px -1px 2px #fff,  
+        0px -2px 5px #ff0,  
+        0px -5px 10px #ff8000, 
+        0px -8px 20px #f00;   
     animation: fire-flicker 0.15s infinite alternate;
 }
-
 @keyframes fire-flicker {
     0% {
         text-shadow: 
@@ -44,7 +45,6 @@ overflow: hidden;
             0px -4px 8px #ff8000, 0px -6px 15px #f00;
         transform: translateY(-1px);
     }
-}
 </style>
 </head>
 <br><br><br>
@@ -62,6 +62,16 @@ overflow: hidden;
   <p>I</p>
   <p>O</p>
   <p>N</p>
-  <p class="credit-fire">Hacked by Ahmed ESSAM</p>
 </div>
+     <div id="container">
+    <span id="date"></span>
+    <span id="clock"></span>
+    
+    <!-- Your main title -->
+    <h1>SCORPION HACK</h1>
+
+    <!-- YOUR NAME IN THE MIDDLE BELOW -->
+    <p class="credit-fire">Hacked by Ahmed ESSAM</p>
+</div>
+
 <script>
