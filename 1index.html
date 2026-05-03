@@ -1,148 +1,101 @@
-﻿</html>
-<style>
-html {
-min-height: 100%;
-}
-body {
-background-color:#1D2025;
-margin:0px;
-a{color:white;}
-}
-html, body {
-background-image: url('scorpjif.gif');
-background-size: 100%;
-background-repeat: no-repeat;
-background-color: #24272b;
-color: white;
-text-align: center;
-margin: 0px;
-overflow: hidden;
-}
-h1 {
-    font-size: 35px;
-    text-align: center;
-    /* This makes the text black as requested */
-    color: black; 
-    font-family: 'Arial Black', sans-serif;
-    
-    /* Fire effect using multiple layers of shadow */
-    text-shadow: 
-        0px -2px 4px #fff,   /* White inner heat */
-        0px -4px 10px #ff0,  /* Yellow flame */
-        0px -10px 20px #ff8000, /* Orange body */
-        0px -18px 40px #f00; /* Red outer glow */
-    
-    /* Apply the fire animation + your previous shaking/fading if desired */
-    animation: flicker 0.1s infinite alternate, shake 0.5s infinite;
-    display: block;
-}
-
-/* This creates the 'Running' fire movement */
-@keyframes flicker {
-    0% {
-        text-shadow: 
-            0px -2px 4px #fff, 0px -4px 10px #ff0, 
-            0px -10px 20px #ff8000, 0px -18px 40px #f00;
-    }
-    100% {
-        text-shadow: 
-            0px -1px 3px #fff, 0px -2px 8px #ff0, 
-            0px -8px 18px #ff8000, 0px -15px 35px #f00;
-        transform: translateY(-1px); /* Slight upward 'heat' lift */
-    }
-}
-
-/* Keep your existing shake animation below this */
-@keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-3px); }
-  40% { transform: translateX(3px); }
-  60% { transform: translateX(-3px); }
-  80% { transform: translateX(3px); }
-  100% { transform: translateX(0); }
-}
-.TextCaption{
-display: block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-a img {
-    display: inline-block;  text-decoration: none;
-}
-a {
-    display: inline-block;  text-decoration: none;
-}
-
-a:hover {
-  animation: shake 0.5s infinite;
-}
-@keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-5px); }
-  40% { transform: translateX(5px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
-}
-#clock{
- float:right;
- margin-right:2.25%;
- margin-top: 0px;
- font-weight:bold;
- font-size:28px;
-  color: white;
-}
-#date {
- float:left;
- margin-left:1.25%;
- font-weight:bold;
- margin-top: 0px;
- font-size:28px;
- color: white;
-}
-</style><script>
-  function showdate() {
-    var dt = new Date();
-    var Hour = dt.getHours();
-    var Minute = dt.getMinutes();
-    var Day = dt.getDate();
-    var Month = dt.getMonth() + 1;
-    var Year = dt.getFullYear();
-
-    // Determine AM or PM
-    var prepand = (Hour >= 12) ? " PM" : " AM";
-
-    // Convert to 12-hour format
-    Hour = Hour % 12;
-    Hour = Hour ? Hour : 12; // If hour is 0, it becomes 12
-
-    // Add leading zero to minutes if less than 10
-    if (Minute < 10) { Minute = "0" + Minute; }
-
-    // Update the HTML
-    document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
-    document.getElementById("clock").innerHTML = (Hour + ":" + Minute + prepand);
-  }
-
-  // Refresh every 1 second
-  setInterval(showdate, 1000);
-</script>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script async src="https://scorpion511.github.io/Dareen/"
-     crossorigin="anonymous"></script>
-	 </head>
-<body class="bg-darker">
-<div id="container"  style="">
-<span id="date" ></span><span id="clock" ></span>
-<h1>SCORPION HACK</h1>
+    <meta charset="UTF-8">
+    <title>SCORP HACK ALL VERSIONS</title>
+    <style>
+        html, body {
+            min-height: 100%;
+            background-image: url('scorpjif.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #24272b;
+            color: white;
+            text-align: center;
+            margin: 0px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ps3/auto490/index.html" onMouseOver="msgs.innerHTML='SCORPION page device ps3'"><img src="FIRMWAREPS3.png" style="width: 400px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="2index.html" onMouseOver="msgs.innerHTML='SCORPION page device ps4'"><img src="FIRMWAREPS4.png" style="width: 400px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ps5/index.html" onMouseOver="msgs.innerHTML='SCORPION page device ps5'"><img src="FIRMWAREPS5.png" style="width: 400px;"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://scorpgame-ar.site/"onMouseOver="msgs.innerHTML='A set of tools used PlayStation devices'"><img src="logo.png" style="width: 250px;"></a>
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolfgame-ar.site/"onMouseOver="msgs.innerHTML='A collection of themes for the PS4 device'"><img ="pic/themes.png"></a>
-</body></html>
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            color: black; 
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 
+                0px -2px 4px #fff,
+                0px -4px 10px #ff0,
+                0px -10px 20px #ff8000,
+                0px -18px 40px #f00;
+            animation: flicker 0.1s infinite alternate, shake 0.5s infinite;
+            display: block;
+            margin-top: 20px;
+        }
+
+        @keyframes flicker {
+            0% { text-shadow: 0px -2px 4px #fff, 0px -4px 10px #ff0, 0px -10px 20px #ff8000, 0px -18px 40px #f00; }
+            100% { text-shadow: 0px -1px 3px #fff, 0px -2px 8px #ff0, 0px -8px 18px #ff8000, 0px -15px 35px #f00; transform: translateY(-1px); }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-3px); }
+            40% { transform: translateX(3px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(3px); }
+            100% { transform: translateX(0); }
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        a:hover {
+            animation: shake 0.5s infinite;
+        }
+
+        #clock { float: right; margin-right: 2.25%; font-weight: bold; font-size: 28px; color: white; }
+        #date { float: left; margin-left: 1.25%; font-weight: bold; font-size: 28px; color: white; }
+        #msgs { color: yellow; font-size: 20px; font-weight: bold; display: block; height: 30px; margin-top: 10px; }
+    </style>
+    <script>
+        function showdate() {
+            var dt = new Date();
+            var Hour = dt.getHours();
+            var Minute = dt.getMinutes();
+            var Day = dt.getDate();
+            var Month = dt.getMonth() + 1;
+            var Year = dt.getFullYear();
+            var prepand = (Hour >= 12) ? " PM" : " AM";
+            Hour = Hour % 12;
+            Hour = Hour ? Hour : 12;
+            if (Minute < 10) { Minute = "0" + Minute; }
+            document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
+            document.getElementById("clock").innerHTML = (Hour + ":" + Minute + prepand);
+        }
+        setInterval(showdate, 1000);
+    </script>
+</head>
+<body onload="showdate()">
+    <div id="container">
+        <span id="date"></span>
+        <span id="clock"></span>
+        <br><br>
+        <h1>SCORP HACK ALL VERSIONS</h1>
+        
+        <!-- Status Message Area -->
+        <div id="msgs">Welcome to Scorpion Hack</div>
+
+        <!-- Fixed Local Links -->
+        <a href="ps3/auto490/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION page device ps3'"><img src="FIRMWAREPS3.png" style="width: 400px;"></a>
+        <a href="2index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION page device ps4'"><img src="FIRMWAREPS4.png" style="width: 400px;"></a>
+        <a href="ps5/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION page device ps5'"><img src="FIRMWAREPS5.png" style="width: 400px;"></a>
+        
+        <br><br>
+        <a href="https://scorpgame-ar.site/" onMouseOver="document.getElementById('msgs').innerHTML='A set of tools used PlayStation devices'"><img src="logo.png" style="width: 250px;"></a>
+        <a href="https://wolfgame-ar.site/" onMouseOver="document.getElementById('msgs').innerHTML='A collection of themes for the PS4 device'"><img src="pic/themes.png" style="width: 250px;"></a>
+    </div>
+</body>
+</html>
