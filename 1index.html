@@ -19,11 +19,35 @@ margin: 0px;
 overflow: hidden;
 }
 h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
+    font-size: 35px;
+    text-align: center;
+    color: #00FFFF; /* Cyan color to match the scorpion */
+    font-family: sans-serif;
+    
+    /* This creates the Neon Cyan Glow */
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    
+    /* This runs both the shaking and the fading together */
+    animation: shake 0.5s infinite, fade 2s ease-in-out infinite;
+    display: block;
 }
+
+/* The Fading Animation */
+@keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* The Shaking Animation (already in your code, but keep this one) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
 
 .TextCaption{
 display: block;
@@ -89,11 +113,11 @@ document.getElementById("clock").innerHTML = (Hour+":"+Minute);
 <body class="bg-darker">
 <div id="container"  style="">
 <span id="date" ></span><span id="clock" ></span>
-<h1 style='font-size:25px;text-align:center;color:yellow;'>SCORPION HACK</h1>
+<h1>SCORPION HACK</h1>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/ps3/auto490/index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps3'"><img src="FIRMWAREPS3.png" style="width: 450px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/2index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps4'"><img src="FIRMWAREPS4.png" style="width: 450px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/ps5/index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps5'"><img src="FIRMWAREPS5.png" style="width: 450px;"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/ps3/auto490/index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps3'"><img src="FIRMWAREPS3.png" style="width: 400px;"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/2index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps4'"><img src="FIRMWAREPS4.png" style="width: 400px;"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/ps5/index.html"onMouseOver="msgs.innerHTML='SCORPION page device ps5'"><img src="FIRMWAREPS5.png" style="width: 400px;"></a>
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://scorpgame-ar.site/"onMouseOver="msgs.innerHTML='A set of tools used PlayStation devices'"><img src="logo.png" style="width: 250px;"></a>
 </a>
