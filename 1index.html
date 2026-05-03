@@ -91,19 +91,32 @@ a:hover {
  color: white;
 }
 </style><script>
-    function showdate() {
-  var dt = new Date();
-    Hour= dt.getHours();
-  Minute= dt.getMinutes();
-     Day=dt.getDate();
-   Month=dt.getMonth()+1;
-   Year=dt.getFullYear();
-if (Minute < 10) { Minute = "0" + Minute; };
-if (Hour < 10) { Hour = "0" + Hour; };
-document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
-document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  function showdate() {
+    var dt = new Date();
+    var Hour = dt.getHours();
+    var Minute = dt.getMinutes();
+    var Day = dt.getDate();
+    var Month = dt.getMonth() + 1;
+    var Year = dt.getFullYear();
+
+    // Determine AM or PM
+    var prepand = (Hour >= 12) ? " PM" : " AM";
+
+    // Convert to 12-hour format
+    Hour = Hour % 12;
+    Hour = Hour ? Hour : 12; // If hour is 0, it becomes 12
+
+    // Add leading zero to minutes if less than 10
+    if (Minute < 10) { Minute = "0" + Minute; }
+
+    // Update the HTML
+    document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
+    document.getElementById("clock").innerHTML = (Hour + ":" + Minute + prepand);
   }
-  
+
+  // Refresh every 1 second
+  setInterval(showdate, 1000);
+</script>
   setInterval(showdate,0);
 </script>
 <head>
