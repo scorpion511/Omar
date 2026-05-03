@@ -1,173 +1,118 @@
-</html>
-<style>
-html {
-min-height: 100%;
-}
-body {
-background-color:#1D2025;
-margin:0px;
-a{color:white;}
-}
-html, body {
-background-image: url('scorpjif.gif');
-background-size: 100%;
-background-repeat: no-repeat;
-background-color: #24272b;
-color: white;
-text-align: center;
-margin: 0px;
-overflow: hidden;
-}
-h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size: 25px;
-text-align: center;
-color: white;
-}
-
-.TextCaption{
-display: block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-a img {
-    display: inline-block;  text-decoration: none;
-}
-a {
-    display: inline-block;  text-decoration: none;
-}
-
-a:hover {
-  animation: shake 0.5s infinite;
-}
-@keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-5px); }
-  40% { transform: translateX(5px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
-}
-#clock{
- float:right;
- margin-right:2.25%;
- margin-top: 0px;
- font-weight:bold;
- font-size:28px;
-  color: white;
-}
-#date {
- float:left;
- margin-left:1.25%;
- font-weight:bold;
- margin-top: 0px;
- font-size:28px;
- color: white;
-}
-</style><script>
-    function showdate() {
-  var dt = new Date();
-    Hour= dt.getHours();
-  Minute= dt.getMinutes();
-     Day=dt.getDate();
-   Month=dt.getMonth()+1;
-   Year=dt.getFullYear();
-if (Minute < 10) { Minute = "0" + Minute; };
-if (Hour < 10) { Hour = "0" + Hour; };
-document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
-document.getElementById("clock").innerHTML = (Hour+":"+Minute);
-  }
-  
-  setInterval(showdate,0);
-</script>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script async src="https://scorpion511.github.io/omar/"
-     crossorigin="anonymous"></script>
-	 </head>
-<body class="bg-darker">
-<div id="container"  style="">
-<span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:yellow;'></h1>
-<div id=all style="text-align:center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="allhost505()"onMouseOver="msgs.innerHTML='SCORPION version 5.05'"><img src="FIRMWARE5.05.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="allhost672()"onMouseOver="msgs.innerHTML='SCORPION version 6.72'"><img src="FIRMWARE6.72.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="allhost900c()"onMouseOver="msgs.innerHTML='SCORPION version 9.00'"><img src="FIRMWARE9.00.png" style="width: 300px;"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="allgoldhen()"onMouseOver="msgs.innerHTML='SCORPION gold hen 5.05 / 6.72 / 9.00'"><img src="GOLD HEN 5.6.9.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="alltrainer()"onMouseOver="msgs.innerHTML='ps4 trainer playlist cheat games'"><img src="PS4 TRAINER5.6.9.png" style="width: 300px;"></a>
-</div>
-<div id=host505 style="text-align:center;display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/505/index.html"onMouseOver="msgs.innerHTML='SCORPION version 5.05' "><img src="pic/505.png"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/restore/505/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 5.05' "><img src="restore5.05.png" style="width: 300px;"></a>
-</div>
-<div id=host672 style="text-align:center;display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/672/index.html"onMouseOver="msgs.innerHTML='SCORPION version 6.72' "><img src="pic/672.png"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf-5.github.io/restore/672/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 6.72' "><img src="restore6.72.png" style="width: 300px;"></a>
-</div>
-<div id=host900c style="text-align:center;display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/900n/index.html"onMouseOver="msgs.innerHTML='SCORPION version 9.00/N (wolf Auto Manual Exploit Full Cache and Compressed version For 900 (hippie68 Method)' "><img src="FIRMWARE9.00N.png" style="width: 400px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/900c/index.html"onMouseOver="msgs.innerHTML='SCORPION version 9.00/C (wolf Host Manual Exploit Full Cache and Compressed version For 900 (hippie68 Method)' "><img ="pic/firmware900c.png" style="width: 400px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/900a/index.html"onMouseOver="msgs.innerHTML=' صفحة الذئب إصدار 9.00 كامله بالغه العربيه'"><img ="pic/900a.png"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/restore/900/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 9.00/N' "><img src="PS4 RESTORE9.00N.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/restore/900/indexc.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 9.00/C' "><img ="pic/restore900c.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wolf-5.github.io/restore/900/indexa.html"onMouseOver="msgs.innerHTML='احفظ الصفحة في دليل المستخدمين 900 بالعربيه' "><img ="pic/restore900a.png"></a>
-</div>
-<div id=trainer style="text-align:center;display:none">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/index505.html"onMouseOver="msgs.innerHTML='SCORPION version 505 Ps4 trainer' "><img src="pic/trainer505.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/index672.html"onMouseOver="msgs.innerHTML='SCORPION version 672 Ps4 trainer' "><img src="pic/trainer672.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/index900.html"onMouseOver="msgs.innerHTML='SCORPION version 900 Ps4 trainer' "><img src="pic/trainer900.png"></a>
-<br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/restore/505/index.html"onMouseOver="msgs.innerHTML='Save a page 505 to a Users Guide Without using usb version Ps4 trainer' "><img src="pic/restore505.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/restore/672/index.html"onMouseOver="msgs.innerHTML='Save a page 672 to a Users Guide Without using usb version Ps4 trainer' "><img src="pic/restore672.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://wolf2022.ir/trainer/restore/900/index.html"onMouseOver="msgs.innerHTML='Save a page 900 to a Users Guide Without using usb version Ps4 trainer' "><img src="pic/restore900.png"></a>
-</div>
-<div id=goldhen style="text-align:center;display:none">
-<a href="http://wolf-5.github.io/hen/505/index.html"onMouseOver="msgs.innerHTML='SCORPION version 5.05' "><img src="GOLDHEN5.05.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="http://wolf-5.github.io/hen/672/index.html"onMouseOver="msgs.innerHTML='SCORPION version 6.75' "><img src="GOLDHEN6.72.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="http://wolf-5.github.io/hen/900/index.html"onMouseOver="msgs.innerHTML='SCORPION version 9.00' "><img src="GOLDHEN9.00.png" style="width: 300px;"></a>
-&nbsp;&nbsp;&nbsp
-<br><br>
-<a href="http://wolf-5.github.io/hen/restore/505/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 5.05' "><img src="pic/restore505.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="http://wolf-5.github.io/hen/restore/672/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 6.72' "><img src="pic/restore672.png"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="http://wolf-5.github.io/hen/restore/900/index.html"onMouseOver="msgs.innerHTML='Save a page to a Users Guide Without using usb version 9.00' "><img src="pic/restore900.png"></a>
-</div>
-<h1 id=msgs style='font-size:35px;text-align:center;'></h1>
-<script>
-function allhost505(){
-all.style.display = "none";
-host505.style.display = "block";
-		}
-function allhost672(){
-all.style.display = "none";
-host672.style.display = "block";
-		}
-function allhost900c(){
-all.style.display = "none";
-host900c.style.display = "block";
-		}
-function allgoldhen(){
-all.style.display = "none";
-goldhen.style.display = "block";
-		}		
-function alltrainer(){
-all.style.display = "none";
-trainer.style.display = "block";
-		}				
-function backall(){
-all.style.display = "block";
-host505.style.display = "none";
-host672.style.display = "none";
-host900c.style.display = "none";
-trainer.style.display = "none";
-goldhen.style.display = "none";
-		}
-</script>
-</body></html>
+    <meta charset="UTF-8">
+    <title>SCORP HACK ALL VERSIONS - PS4</title>
+    <style>
+        html, body {
+            min-height: 100%;
+            background-image: url('scorpjif.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #24272b;
+            color: white;
+            text-align: center;
+            margin: 0px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            color: yellow;
+            text-shadow: 0.1em 0.1em 0.2em black;
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px;
+        }
+        a:hover {
+            animation: shake 0.5s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-5px); }
+            80% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+        #clock { float: right; margin-right: 2.25%; font-weight: bold; font-size: 28px; color: white; }
+        #date { float: left; margin-left: 1.25%; font-weight: bold; font-size: 28px; color: white; }
+        #msgs { color: yellow; font-size: 25px; font-weight: bold; margin-top: 20px; height: 40px; }
+    </style>
+    <script>
+        function showdate() {
+            var dt = new Date();
+            var Hour = dt.getHours();
+            var Minute = dt.getMinutes();
+            var Day = dt.getDate();
+            var Month = dt.getMonth() + 1;
+            var Year = dt.getFullYear();
+            if (Minute < 10) { Minute = "0" + Minute; }
+            if (Hour < 10) { Hour = "0" + Hour; }
+            document.getElementById("date").innerHTML = (Day + "/" + Month + "/" + Year);
+            document.getElementById("clock").innerHTML = (Hour + ":" + Minute);
+        }
+        setInterval(showdate, 1000);
+
+        // Navigation Functions
+        function allhost505() { document.getElementById('all').style.display = "none"; document.getElementById('host505').style.display = "block"; }
+        function allhost672() { document.getElementById('all').style.display = "none"; document.getElementById('host672').style.display = "block"; }
+        function allhost900c() { document.getElementById('all').style.display = "none"; document.getElementById('host900c').style.display = "block"; }
+        function allgoldhen() { document.getElementById('all').style.display = "none"; document.getElementById('goldhen').style.display = "block"; }
+        function alltrainer() { document.getElementById('all').style.display = "none"; document.getElementById('trainer').style.display = "block"; }
+    </script>
+</head>
+<body onload="showdate()">
+    <span id="date"></span>
+    <span id="clock"></span>
+    <br><br>
+    <h1>SCORP HACK ALL VERSIONS</h1>
+
+    <!-- MAIN MENU -->
+    <div id="all">
+        <a href="#" onclick="allhost505()" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 5.05'"><img src="FIRMWARE5.05.png" style="width: 300px;"></a>
+        <a href="#" onclick="allhost672()" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 6.72'"><img src="FIRMWARE6.72.png" style="width: 300px;"></a>
+        <a href="#" onclick="allhost900c()" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 9.00'"><img src="FIRMWARE9.00.png" style="width: 300px;"></a>
+        <br><br>
+        <a href="#" onclick="allgoldhen()" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION gold hen 5.05 / 6.72 / 9.00'"><img src="GOLD HEN 5.6.9.png" style="width: 300px;"></a>
+        <a href="#" onclick="alltrainer()" onMouseOver="document.getElementById('msgs').innerHTML='ps4 trainer playlist cheat games'"><img src="PS4 TRAINER5.6.9.png" style="width: 300px;"></a>
+    </div>
+
+    <!-- 5.05 SECTION -->
+    <div id="host505" style="display:none">
+        <a href="505/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 5.05'"><img src="pic/505.png"></a>
+        <br><br>
+        <a href="restore/505/index.html" onMouseOver="document.getElementById('msgs').innerHTML='Restore 5.05'"><img src="restore5.05.png" style="width: 300px;"></a>
+    </div>
+
+    <!-- 6.72 SECTION -->
+    <div id="host672" style="display:none">
+        <a href="672/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 6.72'"><img src="pic/672.png"></a>
+        <br><br>
+        <a href="restore/672/index.html" onMouseOver="document.getElementById('msgs').innerHTML='Restore 6.72'"><img src="restore6.72.png" style="width: 300px;"></a>
+    </div>
+
+    <!-- 9.00 SECTION -->
+    <div id="host900c" style="display:none">
+        <a href="900n/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 9.00/N'"><img src="FIRMWARE9.00N.png" style="width: 400px;"></a>
+        <a href="900c/index.html" onMouseOver="document.getElementById('msgs').innerHTML='SCORPION version 9.00/C'"><img src="pic/firmware900c.png" style="width: 400px;"></a>
+        <br><br>
+        <a href="restore/900/index.html" onMouseOver="document.getElementById('msgs').innerHTML='Restore 9.00/N'"><img src="PS4 RESTORE9.00N.png" style="width: 300px;"></a>
+    </div>
+
+    <!-- GOLD HEN SECTION -->
+    <div id="goldhen" style="display:none">
+        <a href="hen/505/index.html" onMouseOver="document.getElementById('msgs').innerHTML='GoldHen 5.05'"><img src="GOLDHEN5.05.png" style="width: 300px;"></a>
+        <a href="hen/672/index.html" onMouseOver="document.getElementById('msgs').innerHTML='GoldHen 6.72'"><img src="GOLDHEN6.72.png" style="width: 300px;"></a>
+        <a href="hen/900/index.html" onMouseOver="document.getElementById('msgs').innerHTML='GoldHen 9.00'"><img src="GOLDHEN9.00.png" style="width: 300px;"></a>
+    </div>
+
+    <!-- Message Display Area -->
+    <div id="msgs">Select a Version</div>
+
+</body>
+</html>
